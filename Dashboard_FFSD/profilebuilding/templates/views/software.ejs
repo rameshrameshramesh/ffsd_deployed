@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelance Vacancies</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .vacancy-cards {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+        box-sizing: border-box;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card h2 {
+        color: #333;
+      }
+
+      .card p {
+        color: #666;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Freelance Vacancies</h1>
+    <div class="container">
+      <div class="vacancy-cards">
+        <% vacancies.forEach(vacancy => { %>
+        <div class="card">
+          <h2><%= vacancy.jobTitle %></h2>
+          <p>Category: <%= vacancy.category %></p>
+          <p>Job Description: <%= vacancy.description %></p>
+          <p>Skills Required: <%= vacancy.skills_required %></p>
+          <p>Employment Type: <%= vacancy.workmode %></p>
+          <p>Location: <%= vacancy.location %></p>
+          <p>Company Name: <%= vacancy.company_ %></p>
+          <p>Deadline: <%= vacancy.deadline %></p>
+          <p>Salary: <%= vacancy.salary %></p>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </body>
+</html>

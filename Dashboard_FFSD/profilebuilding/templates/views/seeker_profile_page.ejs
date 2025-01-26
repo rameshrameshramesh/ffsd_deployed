@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/profilePage.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>User Profile</h1>
+      <div class="profile-details">
+        <div class="user-info">
+          <h2>Personal Information</h2>
+          <p>
+            <strong>Name</strong><br />
+            <%= userDetails.first_name %> <%= userDetails.last_name %>
+          </p>
+          <p><strong>Email</strong><br /><%= userDetails.email %></p>
+          <p>
+            <strong>Phone</strong><br />
+            <%= userDetails.phone ? userDetails.phone : 'Not provided' %>
+          </p>
+          <p>
+            <strong>Address</strong><br />
+            <%= userDetails.address ? userDetails.address : 'Not provided' %>
+          </p>
+        </div>
+        <div class="job-details">
+          <h2>Job Details</h2>
+          <p>
+            <strong>Job Position</strong><br /><%= userDetails.job_position ?
+            userDetails.job_position : 'Not provided' %>
+          </p>
+          <p>
+            <strong>Organization</strong><br /><%= userDetails.organization ?
+            userDetails.organization : 'Not provided' %>
+          </p>
+          <p>
+            <strong>Experience</strong><br /><%= userDetails.experience ?
+            userDetails.experience : 'Not provided' %>
+          </p>
+        </div>
+        <div class="education">
+          <h2>Education</h2>
+          <p>
+            <strong>Graduated or Pursuing</strong><br /><%=
+            userDetails.graduated %>
+          </p>
+          <p>
+            <strong>Degree</strong><br /><%= userDetails.qualification ?
+            userDetails.qualification : 'Not provided' %>
+          </p>
+          <p>
+            <strong>Graduation Year</strong><%= userDetails.graduation_year ?
+            userDetails.graduation_year : 'Not provided' %>
+          </p>
+          <p>
+            <strong>Institute Name</strong><br /><%= userDetails.institute_name
+            ? userDetails.institute_name : 'Not provided' %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

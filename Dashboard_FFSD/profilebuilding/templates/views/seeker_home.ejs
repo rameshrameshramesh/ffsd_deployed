@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>OPPORTUNA Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <div class="nav">
+          <a href="seeker_home.ejs" class="bx bx-home" title="home"></a>
+          <form
+            class="search_bar"
+            onsubmit="searchKeyword(document.getElementById('searchInput').value); return false;"
+          >
+            <!-- Add onsubmit event -->
+            <input
+              type="text"
+              placeholder="Search here"
+              name="q"
+              id="searchInput"
+            />
+            <!-- Add id to input -->
+            <button type="submit">
+              <img src="images/image.png" alt="Search" />
+            </button>
+          </form>
+          <a href="history_page_user" class="bx bx-history" title="history"></a>
+          <a href="saved_page_user" class="bx bx-save" title="saved"></a>
+          <a href="/contactus" class="bx bx-help-circle" title="help"></a>
+        </div>
+      </div>
+    </header>
+    <div id="buttonContainer"></div>
+    <div class="container">
+      <div class="left">
+        <section id="profile">
+          <div class="card">
+            <div class="card-back">
+              <img src="images/1.jpeg" alt="image_not_found" />
+            </div>
+            <div class="profile-image">
+              <a href="/seeker_profile">
+                <img src="images/user.jpeg" alt="image_not_found" />
+              </a>
+            </div>
+            <div class="card-content">
+              <h2 class="verify">VERIFIED</h2>
+              <h3>
+                <% if (userDetails) { %> <%= userDetails.first_name %> <%=
+                userDetails.last_name %> <% } else { %> No user details found <%
+                } %>
+              </h3>
+              <p class="p1">
+                <% if (userDetails) { %> <%= userDetails.job_position %>, @<%=
+                userDetails.organization %> <% } else { %> No user details found
+                <% } %>
+              </p>
+            </div>
+            <div class="icons">
+              <nav class="small-nav">
+                <a href="#" class="bx bx-edit"></a>
+                <a href="#" class="bx bx-log-out"></a>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="right">
+        <section id="main-content">
+          <a href="/Software_IT2?department=Freelance" class="card_link">
+            <div class="card_freelance">
+              <img src="images/freelance2.jpeg" alt="image_not_found" />
+              <h1>freelance</h1>
+            </div>
+          </a>
+          <a href="/Software_IT2?department=Professional" class="card_link">
+            <div class="card_professional">
+              <img src="images/professional2.jpeg" alt="image_not_found" />
+              <h1>professional</h1>
+            </div>
+          </a>
+          <a href="/Software_IT2?department=Software" class="card_link">
+            <div class="card_Software_IT">
+              <img src="images/software2.jpeg" alt="image_not_found" />
+              <h1>software</h1>
+            </div>
+          </a>
+          <a href="/Software_IT2?department=PartTime" class="card_link">
+            <div class="card_part_time">
+              <img src="images/part_time2.jpeg" alt="image_not_found" />
+              <h1>part time</h1>
+            </div>
+          </a>
+          <a href="seminars-page.html" class="card_link">
+            <div class="card_Seminars">
+              <img src="images/seminars2.jpeg" alt="image_not_found" />
+              <h1>seminars</h1>
+            </div>
+          </a>
+          <a href="/Software_IT2?department=Others" class="card_link">
+            <div class="card_others">
+              <img src="images/others2.jpeg" alt="image_not_found" />
+              <h1>others</h1>
+            </div>
+          </a>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

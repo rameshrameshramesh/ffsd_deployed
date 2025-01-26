@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combined Prompt Alert</title>
+</head>
+<body>
+
+<button onclick="showCombinedPrompt()">Alert</button>
+
+<script>
+function showCombinedPrompt() {
+    // Prompt the user for both string and integer
+    var userInput = prompt("Please enter an integer followed by a space and then a string (e.g., '42 hello'):");
+
+    // If the user cancels the prompt or enters an empty string, exit
+    if (userInput === null || userInput.trim() === "") {
+        return;
+    }
+
+    // Split the user input into integer and string parts
+    var inputs = userInput.trim().split(" ");
+    
+    // Extract the integer and string parts
+    var inputInteger = parseInt(inputs[0]);
+    var inputString = inputs.slice(1).join(" "); // Join the remaining parts into a string
+
+    // If the first part is not a number, show an error message
+    if (isNaN(inputInteger)) {
+        alert("Invalid input for integer. Please enter a valid integer.");
+        return;
+    }
+
+    // Construct the alert message
+    var alertMessage = "You entered the integer: " + inputInteger + "\n";
+    alertMessage += "You entered the string: " + inputString;
+
+    // Display the alert message
+    alert(alertMessage);
+}
+</script>
+
+</body>
+</html>

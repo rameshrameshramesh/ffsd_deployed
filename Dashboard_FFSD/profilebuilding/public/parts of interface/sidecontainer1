@@ -1,0 +1,123 @@
+  // Parse the URL to get the value of the variable
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  var variable = urlParams.get('department');
+  
+  // Set the text content of the h1 element to the variable value
+  document.getElementById('variableValue').textContent = variable;
+    
+  const menuOptions = [
+    { title: 'Companies', options: ['Tech Giants', 'Finance Firms', 'Healthcare Institutions', 'Government Agencies', 'Startups'] },
+    { title: 'Salary', options: ['$50000 - $100000', '$200000 - $250000', '$30000 - $350000', '$40000 - $45000', '$4500+'] },
+    { title: 'Location', options: ['San Francisco, CA', 'New York City, NY', 'Seattle, WA', 'Boston, MA', 'Austin, TX'] },
+    { title: 'WorkMode', options: ['Full-time',  'Remote', 'Hybrid (Mix of Remote and In-office)'] },
+   
+  { title: 'Domains', options: [
+    'API Development',
+    'Cyber Security',
+    'Embedded Systems',
+    'Cloud Computing',
+    'Data Science',
+    'Artificial Intelligence',
+    'Full Stack Developer',
+    'Blockchain']}
+  ];
+    
+  arrayColumn = (arr, n) => arr.map(x => x[n]);
+  menuOptions[0].options = arrayColumn(jobs, 'company');
+  menuOptions[2].options = arrayColumn(jobs, 'location');
+  menuOptions[4].options = arrayColumn(jobs, 'jobTitle');
+   // = two_d.map(function(value,index) { return value[2]; });
+      var departmentDomains = {
+        'Software_IT': ['API Development', 'Cyber Security', 'Cloud Computing', 'Data Science', 'Artificial Intelligence', 'Full Stack Developer', 'Blockchain'],
+        'Networking': ['Network Security', 'Wireless Networking', 'Network Administration'],
+        'Electrical': ['Power Systems', 'Control Systems', 'Electronics'],
+        'Mechanical': ['Mechanical Design', 'Thermal Engineering', 'Manufacturing Processes'],
+        'Civil Working': ['Structural Engineering', 'Construction Management', 'Geotechnical Engineering'],
+        'Chemist': ['Chemical Analysis', 'Quality Control', 'Pharmaceutical Research', 'Regulatory Affairs', 'Drug Development'],
+        'Government': ['Public Policy', 'Policy Analysis', 'Public Administration', 'Government Affairs', 'Public Service'],
+        'Electronics': ['Power Electronics', 'Embedded Systems', 'Digital Signal Processing', 'Microelectronics', 'VLSI Design']
+    }; 
+    window.onload = function() {
+      const params = new URLSearchParams(window.location.search);
+     department = params.get('department');
+      if (department) {
+          // Use the selected department here as needed
+          console.log('Selected Department:', department);
+      }
+  };
+   
+    function changeDepartment(menuOptions, departmentDomains, department) {
+    // Find the index of the "Domains" section in the menuOptions array
+    const domainsIndex = menuOptions.findIndex(option => option.title === 'Domains');
+
+    // Update the domains options based on the selected department
+    if (department in departmentDomains) {
+        // Replace the existing options with the options corresponding to the selected department
+        menuOptions[domainsIndex].options = departmentDomains[department];
+        console.log("Updated domains:", menuOptions[domainsIndex].options);
+    } else {
+        console.log("Department not found:", department);
+    }
+}
+changeDepartment(menuOptions, departmentDomains, variable);
+
+      // Function to create a menu item
+      function createMenuItem(text, submenu) {
+        var li = document.createElement('li');
+        var button = document.createElement('button');
+        button.textContent = text;
+        if (submenu) {
+          button.addEventListener('click', function() {
+              submenu.classList.add('show');
+          });
+        }
+        li.appendChild(button);
+        return li;
+      }
+      function submenuClickHandler(event) {
+        var buttonName = event.target.textContent;
+        alert('Submenu item clicked: ' + buttonName);
+      }
+      
+    
+      // Function to create dropdown elements
+      function createDropdownMenus() {
+        const menuContainer = document.getElementById('sideContainer1');
+    
+        menuOptions.forEach(option => {
+            const dropdownDiv = document.createElement('div');
+            dropdownDiv.classList.add('dropdown1');
+    
+            const dropdownDiv1 = document.createElement('div');
+            dropdownDiv1.id = "menu-content";
+            const button = document.createElement('button');
+            button.classList.add('dropbtn');
+            button.textContent = option.title;
+    
+            const toggleButton = document.createElement('button');
+            toggleButton.textContent = '∇';
+            toggleButton.addEventListener('click', () => toggleDropdown(dropdownDiv));
+    
+            const dropdownContent = document.createElement('div');
+            dropdownContent.classList.add('dropdown1-content');
+            dropdownContent.id = option.title.replace(/\s+/g, '');
+    
+            dropdownDiv.appendChild(dropdownDiv1);
+            dropdownDiv1.appendChild(button);
+            dropdownDiv1.appendChild(toggleButton);
+            dropdownDiv.appendChild(dropdownContent);
+    
+            menuContainer.appendChild(dropdownDiv);
+    
+            populateDropdownWithCheckboxes(option.title.replace(/\s+/g, ''), option.options);
+            handleCheckboxSelection(option.title.replace(/\s+/g, ''));
+    
+            // Add "Sort By" option
+            const sortByOption = document.createElement('button');
+            sortByOption.textContent = 'Sort By';
+            sortByOption.addEventListener('click', () => handleSortBySelection(option.title.replace(/\s+/g, '')));
+            dropdownContent.appendChild(sortByOption);
+        });
+    }
+    

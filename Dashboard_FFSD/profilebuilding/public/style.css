@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+#profile {
+  height: 100vh;
+  justify-content: left;
+  align-items: center;
+  display: flex;
+  margin-left: 35px;
+}
+.card {
+  font-family: "Poppins", sans-serif;
+  width: 200px;
+  height: 310px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 300px;
+}
+.card-back {
+  width: 10%;
+  height: 50px;
+}
+.card-back img {
+  width: 200px;
+  height: 100px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.profile-image img {
+  z-index: 1;
+  width: 90px;
+  height: 100px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 100px;
+  border: 5px solid #fff;
+  transition-duration: 0.4s;
+  transition-property: transform;
+}
+
+.profile-image img:hover {
+  transform: scale(1.1);
+}
+
+.card-content h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.card-content p {
+  font-size: 13px;
+  text-align: center;
+  padding: 0 20px 5px 20px;
+}
+
+.p1 {
+  margin-top: -20px;
+}
+
+#edit {
+  height: 50px;
+  width: 200px;
+  justify-content: left;
+  align-items: center;
+  display: flex;
+  background-color: #fff;
+  margin-left: 35px;
+  margin-top: -150px;
+}
+
+.icons {
+  text-align: center;
+  margin-top: -20px;
+  color: #000000;
+}
+
+.icons a {
+  text-decoration: none;
+  color: #191818;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  margin-right: 5px;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  width: 100%;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  min-height: 70px;
+  padding: 40px 0px 0px 20px;
+}
+
+.search_bar {
+  width: 800px;
+  height: 50px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  margin-top: -50px;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.search_bar input {
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: black;
+  background-color: #fff;
+}
+
+::placeholder {
+  color: black;
+}
+
+.search_bar button {
+  border: 0;
+  border-radius: 300%;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.search_bar button {
+  width: 35px;
+}
+.search_bar button:hover {
+  transform: translateY(-5px);
+}
+
+.bx {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #f5f2f2;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  margin-right: 5px;
+  align-items: center;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.icons {
+  text-align: center;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.bx {
+  font-size: 35px;
+  cursor: pointer;
+  margin-top: -10px;
+  transition: font-size 0.3s ease;
+}
+
+.bx:hover {
+  font-size: 40px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #cfcccc;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: -50px 5px 0;
+  align-items: center;
+  font-weight: 300;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+#main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: -600px;
+  margin-left: 200px;
+}
+
+.card_freelance img {
+  width: 700px;
+  height: 200px;
+  box-shadow: 0 0 5px rgba(252, 252, 252, 0.5);
+}
+
+.card_professional img {
+  width: 700px;
+  height: 200px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card_others img {
+  width: 700px;
+  height: 200px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card_Software_IT img {
+  width: 700px;
+  height: 200px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card_part_time img {
+  width: 700px;
+  height: 200px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card_Seminars img {
+  width: 700px;
+  height: 200px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card_freelance h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: -170px;
+  color: #fff;
+}
+.card_professional h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: -170px;
+  color: #fff;
+}
+.card_Software_IT h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: -180px;
+  color: #fff;
+}
+.card_part_time h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: -170px;
+  color: #fff;
+}
+.card_Seminars h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: -170px;
+  color: #fff;
+}
+.card_others h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: -170px;
+  color: #fff;
+}
+
+.bx {
+  position: relative;
+}
+
+.bx::after {
+  content: attr(title);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(244, 240, 240, 0.8);
+  color: #1f1e1e;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bx:hover::after {
+  opacity: 1;
+}
+
+.card_freelance,
+.card_professional,
+.card_Software_IT,
+.card_part_time,
+.card_Seminars,
+.card_others {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card_freelance:hover,
+.card_professional:hover,
+.card_Software_IT:hover,
+.card_part_time:hover,
+.card_Seminars:hover,
+.card_others:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.card_freelance h1:hover,
+.card_professional h1:hover,
+.card_Software_IT h1:hover,
+.card_part_time h1:hover,
+.card_Seminars h1:hover,
+.card_others h1:hover {
+  color: #181818;
+}
+
+.card_link {
+  flex: 1 1 40%;
+  max-width: 40%;
+  text-decoration: none;
+}
+
+.verify {
+  font-size: 10px;
+  text-align: center;
+  background-color: rgb(247, 89, 89);
+  margin-bottom: -20px;
+  border-radius: 50px;
+  width: 70px;
+  margin-left: 63px;
+}

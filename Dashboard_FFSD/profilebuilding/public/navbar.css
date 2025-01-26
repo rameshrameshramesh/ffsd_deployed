@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 90px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 100;
+  background-color: rgb(41, 41, 41);
+}
+
+.app_name {
+  font-size: 2em;
+  color: #fff;
+  pointer-events: none;
+  margin-right: 300px;
+  margin-left: -100px;
+}
+.navigation {
+  display: flex;
+  margin-left: 150px;
+}
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  padding: 3px 15px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 0 10px;
+  margin-right: 5px;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.navigation a:first-child {
+  margin-left: 0;
+  align-items: center;
+  margin-top: 10px;
+}
+.navigation a:last-child {
+  margin-right: 0;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.navigation a:not(.getin):hover,
+.navigation a:not(.getin).active {
+  background: #fff;
+  color: rgb(41, 41, 41);
+  align-items: center;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.getin {
+  background-color: green;
+}
+
+.getin:hover {
+  background: linear-gradient(
+    70deg,
+    rgba(253, 29, 29, 1),
+    rgba(253, 29, 29, 0.7)
+  );
+}

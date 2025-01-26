@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose yourself!</title>
+    <link rel="stylesheet" href="/client_seeker_choice.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="question">Are you here as ....?</div>
+      <div class="options">
+        <div class="client" id="client" onclick="redirectToProfile('client')">
+          CLIENT
+        </div>
+        <div class="seeker" id="seeker" onclick="redirectToProfile('seeker')">
+          SEEKER
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function redirectToProfile(option) {
+        const url =
+          option === "client"
+            ? "/profile_det_client?role=client"
+            : "/profile_det?role=seeker";
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>

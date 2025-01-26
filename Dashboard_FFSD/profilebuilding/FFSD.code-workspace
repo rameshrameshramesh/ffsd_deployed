@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "FFSD",
+			"path": "../../../../../../../../Downloads/FFSD"
+		},
+		{
+			"name": "ffsd_project",
+			"path": "../../../.."
+		}
+	],
+	"settings": {}
+}
